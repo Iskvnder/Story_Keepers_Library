@@ -1,4 +1,5 @@
-package page_main;
+package page_books;
+
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,23 +12,20 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class activity_main {
-
+public class activity_books {
     @FXML
-    Button booksButton;
+    Button mainButton;
     @FXML
     Button studentsButton;
     @FXML
     Button borrowsButton;
-
     private Stage stage;
     private Parent root;
 
+    public void switchToMain(ActionEvent actionEvent) throws IOException {
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_main/view_main.fxml")));
 
-
-    public void switchToBooks(ActionEvent actionEvent) throws IOException {
-        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_books.fxml")));
-        Stage window = (Stage) booksButton.getScene().getWindow() ;
+        Stage window = (Stage) mainButton.getScene().getWindow() ;
         window.setScene(new Scene(root, 1920, 1080));
     }
 
@@ -42,5 +40,4 @@ public class activity_main {
         Stage window = (Stage) borrowsButton.getScene().getWindow() ;
         window.setScene(new Scene(root, 1920, 1080));
     }
-
 }

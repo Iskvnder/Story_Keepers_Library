@@ -15,4 +15,13 @@ module com.example.story_keepers_library {
     opens page_main to javafx.fxml;
     exports page_main;
 
+    opens page_books to javafx.fxml;
+    exports page_books;
+
+    opens page_students to javafx.fxml;
+    exports page_students;
+
+    opens page_borrows to javafx.fxml;
+    exports page_borrows;
+
 }

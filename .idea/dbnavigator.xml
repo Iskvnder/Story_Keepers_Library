@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -13,7 +13,8 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="ca764717-8b56-4bb9-8294-8ef4c88bc5cd">
-      <console name="MySQL Connection" type="STANDARD" schema="dbms" session="Main" />
+      <console name="MySQL Connection" type="STANDARD" schema="dbms" session="Main"><![CDATA[ALTER TABLE books
+ADD COLUMN book_description LONGTEXT AFTER book_name;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -24,13 +25,19 @@
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="ca764717-8b56-4bb9-8294-8ef4c88bc5cd" dataset="dbms.borrows" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="ca764717-8b56-4bb9-8294-8ef4c88bc5cd" dataset="dbms.books" active-filter-id="" />
+    <filter-actions connection-id="ca764717-8b56-4bb9-8294-8ef4c88bc5cd" dataset="dbms.books" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="ca764717-8b56-4bb9-8294-8ef4c88bc5cd" dataset="dbms.students" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="ca764717-8b56-4bb9-8294-8ef4c88bc5cd" dataset="dbms.authors" active-filter-id="EMPTY_FILTER" />
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
     <filters />
+  </component>
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
+    <recently-used-interfaces />
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
@@ -516,5 +523,8 @@
         </visibility-settings>
       </environment>
     </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
   </component>
 </project>
