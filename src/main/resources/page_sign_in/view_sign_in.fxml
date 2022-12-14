@@ -29,7 +29,7 @@
             <Font name="Comic Sans MS" size="16.0" />
          </font></JFXButton>
       <TextField layoutX="363.0" layoutY="154.0" promptText="E-mail" style="-fx-background-color: #403D39; -fx-text-fill: #FFFCF2;" />
-      <PasswordField layoutX="362.0" layoutY="200.0" promptText="Password" style="-fx-background-color: #403D39; -fx-text-fill: #FFFCF2;" />
+      <PasswordField layoutX="363.0" layoutY="200.0" promptText="Password" style="-fx-background-color: #403D39; -fx-text-fill: #FFFCF2;" />
       <JFXButton layoutX="533.0" layoutY="364.0" text="Sign Up" textFill="#d59254">
          <font>
             <Font name="Comic Sans MS Bold Italic" size="12.0" />
