@@ -1,28 +1,32 @@
 package DATABASE;
 
+import com.mysql.jdbc.Driver;
+
 import java.sql.*;
 
-public class DatabaseHandler extends Configs {
+public class DatabaseHandler extends Configs{
     Connection dbConnection;
-    public Connection getDbConnection()
-            throws ClassNotFoundException, SQLException
-    {
-        String connectionString = "jdbc:mysql//" + dbHost + ":" + dbPort + "/" + dbName;
+
+    public Connection getDbConnection() throws ClassNotFoundException, SQLException{
+        String connectionString = "jdbc:mysql://" + dbHost + ":" +dbPort + "/" + dbName;
         Class.forName("com.mysql.jdbc.Driver");
+
         dbConnection = DriverManager.getConnection(connectionString, dbUser, dbPassword);
         return dbConnection;
     }
 
-    public void addStudent(String genre_id, String genre_name) throws SQLException, ClassNotFoundException {
-        String insert = "INSERT INTO " + GenreConst.genreTable + "(" + GenreConst.genreId + "," + GenreConst.genreName + ")" + " VALUES(4, Russian Literature) ";
+    public void showListOfBorrows
+            (String borrowId, String studentId, String bookId, String takeDate, String broughtDate)
+            throws SQLException, ClassNotFoundException {
+        //SELECT * FROM BORROWS;
+        String selectAll = "SELECT * FROM " + borrowsConst.borrowsTable;
 
-        try {
-            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
-            prSt.setString(1, genre_id);
-            prSt.setString(2, genre_name);
-            prSt.executeUpdate();
-        } catch (SQLException E){
-            E.printStackTrace();
+        PreparedStatement ListOfBorrowsPrst = getDbConnection().prepareStatement(selectAll);
+        ResultSet resultSet = ListOfBorrowsPrst.executeQuery();
+        if(resultSet.next()){
+            System.out.println("borrow_id");
         }
+
     }
+
 }
