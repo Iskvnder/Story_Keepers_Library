@@ -1,5 +1,6 @@
 package page_borrows;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +23,9 @@ public class activity_borrows_second {
 
     @FXML
     Button previousButton;
+    @FXML
+    Button closeButton;
+
 
     private Stage stage;
     private Parent root;
@@ -49,5 +53,8 @@ public class activity_borrows_second {
         Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_borrows/view_borrows.fxml")));
         Stage window = (Stage) previousButton.getScene().getWindow() ;
         window.setScene(new Scene(root, 1920, 1080));
+    }
+    public void close(ActionEvent actionEvent) throws IOException {
+        Platform.exit();
     }
 }

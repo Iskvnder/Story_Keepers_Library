@@ -34,7 +34,7 @@
     <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="1390.0" layoutY="750.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@../Images/pic_exit_students.png" />
     </ImageView>
-    <JFXButton layoutX="1390.0" layoutY="750.0" prefHeight="100.0" prefWidth="400.0" text=".">
+    <JFXButton fx:id="closeButton" layoutX="1390.0" layoutY="750.0" onAction="#close" prefHeight="100.0" prefWidth="400.0" text=".">
         <font>
             <Font size="1.0" />
         </font>
