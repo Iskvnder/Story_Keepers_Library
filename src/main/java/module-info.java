@@ -28,4 +28,6 @@ module com.example.story_keepers_library {
 
     opens DATABASE to javafx.fxml;
     exports DATABASE;
+    exports DATABASE.DateFrom;
+    opens DATABASE.DateFrom to javafx.fxml;
 }

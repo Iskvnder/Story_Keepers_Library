@@ -15,18 +15,4 @@ public class DatabaseHandler extends Configs{
         return dbConnection;
     }
 
-    public void showListOfBorrows
-            (String borrowId, String studentId, String bookId, String takeDate, String broughtDate)
-            throws SQLException, ClassNotFoundException {
-        //SELECT * FROM BORROWS;
-        String selectAll = "SELECT * FROM " + borrowsConst.borrowsTable;
-
-        PreparedStatement ListOfBorrowsPrst = getDbConnection().prepareStatement(selectAll);
-        ResultSet resultSet = ListOfBorrowsPrst.executeQuery();
-        if(resultSet.next()){
-            System.out.println("borrow_id");
-        }
-
-    }
-
 }

@@ -1,8 +1,10 @@
-package DATABASE;
+package DATABASE.DateFrom;
+
+import DATABASE.Configs;
 
 import java.sql.*;
 
-public class DateFromBorrows extends Configs{
+public class DateFromBooks extends Configs {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
         try {
@@ -11,14 +13,15 @@ public class DateFromBorrows extends Configs{
 
             Connection connection = DriverManager.getConnection(connectionString, dbUser, dbPassword);
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select * from borrows");
+            ResultSet resultSet = statement.executeQuery("select * from books");
 
             while (resultSet.next()) {
-                System.out.println(resultSet.getString("borrow_id"));
-                System.out.println(resultSet.getString("student_id"));
                 System.out.println(resultSet.getString("book_id"));
-                System.out.println(resultSet.getString("take_date"));
-                System.out.println(resultSet.getString("brought_date"));
+                System.out.println(resultSet.getString("quantity"));
+                System.out.println(resultSet.getString("book_name"));
+                System.out.println(resultSet.getString("page_count"));
+                System.out.println(resultSet.getString("author_id"));
+                System.out.println(resultSet.getString("genre_id"));
             }
         }catch (Exception e){
             e.printStackTrace();

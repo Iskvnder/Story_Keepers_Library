@@ -1,8 +1,10 @@
-package DATABASE;
+package DATABASE.DateFrom;
+
+import DATABASE.Configs;
 
 import java.sql.*;
 
-public class DateFromStudents extends Configs{
+public class DateFromStudents extends Configs {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
         try {
