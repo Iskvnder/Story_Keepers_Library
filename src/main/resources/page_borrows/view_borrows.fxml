@@ -6,83 +6,75 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #8a2846;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="page_borrows.activity_borrows">
-    <children>
-        <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="1390.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../Images/pic_main_page.png" />
-            </image>
-        </ImageView>
-        <JFXButton fx:id="mainButton" layoutX="1390.0" layoutY="300.0" onAction="#switchToMain" prefHeight="100.0" prefWidth="400.0" text=".">
-            <font>
-                <Font size="1.0" />
-            </font>
-        </JFXButton>
-        <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="1390.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../Images/pic_students_page.png" />
-            </image>
-        </ImageView>
-        <JFXButton fx:id="studentsButton" layoutX="1390.0" layoutY="450.0" onAction="#switchToStudents" prefHeight="100.0" prefWidth="400.0" text=".">
-            <font>
-                <Font size="1.0" />
-            </font>
-        </JFXButton>
-        <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="1390.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../Images/pic_books_page.png" />
-            </image>
-        </ImageView>
-        <JFXButton fx:id="booksButton" layoutX="1390.0" layoutY="600.0" onAction="#switchToBooks" prefHeight="100.0" prefWidth="400.0" text=".">
-            <font>
-                <Font size="1.0" />
-            </font>
-        </JFXButton>
-        <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="1390.0" layoutY="750.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../Images/pic_exit.png" />
-            </image>
-        </ImageView>
-        <JFXButton layoutX="1390.0" layoutY="750.0" prefHeight="100.0" prefWidth="400.0" text=".">
-            <font>
-                <Font size="1.0" />
-            </font>
-        </JFXButton>
-        <Pane prefHeight="1080.0" prefWidth="1200.0" style="-fx-background-color: #252422;" />
-        <ImageView fitHeight="1080.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../Images/pic_borrows_left.png" />
-            </image>
-        </ImageView>
-        <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../Images/pic_list_borrows.png" />
-            </image>
-        </ImageView>
-        <JFXButton layoutX="200.0" layoutY="200.0" prefHeight="150.0" prefWidth="800.0" text=".">
-            <font>
-                <Font size="1.0" />
-            </font>
-        </JFXButton>
-        <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../Images/pic_student_borrows.png" />
-            </image>
-        </ImageView>
-        <JFXButton layoutX="200.0" layoutY="400.0" prefHeight="150.0" prefWidth="800.0" text=".">
-            <font>
-                <Font size="1.0" />
-            </font>
-        </JFXButton>
-        <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../Images/pic_history_borrows.png" />
-            </image>
-        </ImageView>
-        <JFXButton layoutX="200.0" layoutY="600.0" prefHeight="150.0" prefWidth="800.0" text=".">
-            <font>
-                <Font size="1.0" />
-            </font>
-        </JFXButton>
-    </children>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #8a5a44;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="page_borrows.activity_borrows">
+    <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="1390.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Images/pic_main_page.png" />
+    </ImageView>
+    <JFXButton fx:id="mainButton" layoutX="1390.0" layoutY="300.0" onAction="#switchToMain" prefHeight="100.0" prefWidth="400.0" text=".">
+        <font>
+            <Font size="1.0" />
+        </font>
+    </JFXButton>
+    <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="1390.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Images/pic_students_page.png" />
+    </ImageView>
+    <JFXButton fx:id="studentsButton" layoutX="1390.0" layoutY="450.0" onAction="#switchToStudents" prefHeight="100.0" prefWidth="400.0" text=".">
+        <font>
+            <Font size="1.0" />
+        </font>
+    </JFXButton>
+    <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="1390.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Images/pic_books_page.png" />
+    </ImageView>
+    <JFXButton fx:id="booksButton" layoutX="1390.0" layoutY="600.0" onAction="#switchToBooks" prefHeight="100.0" prefWidth="400.0" text=".">
+        <font>
+            <Font size="1.0" />
+        </font>
+    </JFXButton>
+    <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="1390.0" layoutY="750.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Images/pic_exit.png" />
+    </ImageView>
+    <JFXButton layoutX="1390.0" layoutY="750.0" prefHeight="100.0" prefWidth="400.0" text=".">
+        <font>
+            <Font size="1.0" />
+        </font>
+    </JFXButton>
+    <Pane prefHeight="1080.0" prefWidth="1200.0" style="-fx-background-color: #252422;" />
+    <ImageView fitHeight="1080.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Images/pic_menu_left.png" />
+    </ImageView>
+    <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Images/pic_list_borrows.png" />
+    </ImageView>
+    <JFXButton layoutX="200.0" layoutY="200.0" prefHeight="150.0" prefWidth="800.0" text=".">
+        <font>
+            <Font size="1.0" />
+        </font>
+    </JFXButton>
+    <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Images/pic_student_borrows.png" />
+    </ImageView>
+    <JFXButton layoutX="200.0" layoutY="400.0" prefHeight="150.0" prefWidth="800.0" text=".">
+        <font>
+            <Font size="1.0" />
+        </font>
+    </JFXButton>
+    <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Images/pic_history_borrows.png" />
+    </ImageView>
+    <JFXButton layoutX="200.0" layoutY="600.0" prefHeight="150.0" prefWidth="800.0" text=".">
+        <font>
+            <Font size="1.0" />
+        </font>
+    </JFXButton>
+   <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1000.0" layoutY="900.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../Images/pic_arrow_right.png" />
+      </image>
+   </ImageView>
+   <JFXButton fx:id="nextButton" layoutX="1000.0" layoutY="900.0" onAction="#switchPage" prefHeight="100.0" prefWidth="100.0" text=".">
+      <font>
+         <Font size="1.0" />
+      </font>
+   </JFXButton>
 </Pane>

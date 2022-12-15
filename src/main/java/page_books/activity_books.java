@@ -19,6 +19,8 @@ public class activity_books {
     Button studentsButton;
     @FXML
     Button borrowsButton;
+    @FXML
+    Button nextButton;
     private Stage stage;
     private Parent root;
 
@@ -38,6 +40,12 @@ public class activity_books {
     public void switchToBorrows(ActionEvent actionEvent) throws IOException {
         Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_borrows/view_borrows.fxml")));
         Stage window = (Stage) borrowsButton.getScene().getWindow() ;
+        window.setScene(new Scene(root, 1920, 1080));
+    }
+
+    public void switchPage(ActionEvent actionEvent) throws IOException {
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_books_second.fxml")));
+        Stage window = (Stage) nextButton.getScene().getWindow() ;
         window.setScene(new Scene(root, 1920, 1080));
     }
 }
