@@ -46,7 +46,7 @@
     <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@../Images/pic_start_borrow.png" />
     </ImageView>
-    <JFXButton layoutX="200.0" layoutY="200.0" prefHeight="150.0" prefWidth="800.0" text=".">
+    <JFXButton fx:id="addButton" layoutX="200.0" layoutY="200.0" onAction="#showAddBorrow" prefHeight="150.0" prefWidth="800.0" text=".">
         <font>
             <Font size="1.0" />
         </font>
@@ -54,7 +54,7 @@
     <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@../Images/pic_end_borrow.png" />
     </ImageView>
-    <JFXButton layoutX="200.0" layoutY="400.0" prefHeight="150.0" prefWidth="800.0" text=".">
+    <JFXButton fx:id="deleteButton" layoutX="200.0" layoutY="400.0" onAction="#showDeleteBorrow" prefHeight="150.0" prefWidth="800.0" text=".">
         <font>
             <Font size="1.0" />
         </font>

@@ -13,7 +13,8 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class activity_borrows_second {
-
+    @FXML
+    Button deleteButton;
     @FXML
     Button mainButton;
     @FXML
@@ -25,6 +26,8 @@ public class activity_borrows_second {
     Button previousButton;
     @FXML
     Button closeButton;
+    @FXML
+    Button addButton;
 
 
     private Stage stage;
@@ -54,6 +57,20 @@ public class activity_borrows_second {
         Stage window = (Stage) previousButton.getScene().getWindow() ;
         window.setScene(new Scene(root, 1920, 1080));
     }
+
+    public void showAddBorrow(ActionEvent actionEvent) throws IOException {
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_borrows/view_add_borrow.fxml")));
+        Stage window = (Stage) addButton.getScene().getWindow() ;
+        window.setScene(new Scene(root, 1920, 1080));
+    }
+
+    public void showDeleteBorrow(ActionEvent actionEvent) throws IOException {
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_borrows/view_delete_borrow.fxml")));
+        Stage window = (Stage) deleteButton.getScene().getWindow() ;
+        window.setScene(new Scene(root, 1920, 1080));
+    }
+
+
     public void close(ActionEvent actionEvent) throws IOException {
         Platform.exit();
     }

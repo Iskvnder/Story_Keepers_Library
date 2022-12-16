@@ -12,7 +12,10 @@
       <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="780.0" layoutY="800.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../Images/pic_add_student_button.png" />
       </ImageView>
-      <JFXButton fx:id="addButton" layoutX="780.0" layoutY="800.0" onAction="#initialize" prefHeight="100.0" prefWidth="400.0" />
+      <JFXButton fx:id="addButton" layoutX="780.0" layoutY="800.0" onAction="#initialize" prefHeight="100.0" prefWidth="400.0" text=".">
+         <font>
+            <Font size="1.0" />
+         </font></JFXButton>
       <TextField fx:id="studentId" layoutX="780.0" layoutY="200.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT ID" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
          <font>
             <Font size="24.0" />

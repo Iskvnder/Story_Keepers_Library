@@ -15,45 +15,29 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Objects;
 
-public class activity_add_borrow {
+public class activity_delete_borrow {
     @FXML
-    Button addButton;
+    Button deleteButton;
     @FXML
     TextField borrowId;
-    @FXML
-    TextField studentId;
-    @FXML
-    TextField bookId;
-    @FXML
-    TextField takeDate;
-    @FXML
-    TextField broughtDate;
     @FXML
     Button previousButton;
 
     @FXML
     void initialize(){
-        addButton.setOnAction(actionEvent -> {
+        deleteButton.setOnAction(actionEvent -> {
             try {
-                addStudent(studentId.getText(), borrowId.getText(), bookId.getText(), takeDate.getText(),broughtDate.getText());
+                deleteButton(borrowId.getText());
             } catch (SQLException | ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
         });
     }
+    public void deleteButton(String borrowId) throws SQLException, ClassNotFoundException {
 
-    public void addStudent(String borrowId, String studentId, String bookId,
-                           String takeDate, String broughtDate) throws SQLException, ClassNotFoundException {
-
-        String insert = "INSERT INTO borrows(borrow_id, student_id, book_id, take_date, brought_date) VALUES (?,?,?,?,?,?)";
+        String insert = "DELETE FROM BORROWS WHERE(book_id = "+ borrowId + ")";
         DatabaseHandler databaseHandler = new DatabaseHandler();
         PreparedStatement preparedStatement = databaseHandler.getDbConnection().prepareStatement(insert);
-
-        preparedStatement.setString(1, borrowId);
-        preparedStatement.setString(2, studentId);
-        preparedStatement.setString(3, bookId);
-        preparedStatement.setString(4, takeDate);
-        preparedStatement.setString(5, broughtDate);
 
         preparedStatement.executeUpdate();
 
