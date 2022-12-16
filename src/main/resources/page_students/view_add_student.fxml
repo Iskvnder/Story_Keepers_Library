@@ -5,18 +5,57 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="page_students.activity_add_student">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: FFFCF2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="page_students.activity_add_student">
    <children>
       <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="780.0" layoutY="800.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../Images/pic_add_student_button.png" />
       </ImageView>
       <JFXButton fx:id="addButton" layoutX="780.0" layoutY="800.0" onAction="#initialize" prefHeight="100.0" prefWidth="400.0" />
-      <TextField fx:id="studentId" layoutX="780.0" layoutY="200.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT ID" />
-      <TextField fx:id="studentName" layoutX="780.0" layoutY="300.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT NAME" />
-      <TextField fx:id="studentSurname" layoutX="780.0" layoutY="400.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT SURNAME" />
-      <TextField fx:id="studentGender" layoutX="780.0" layoutY="500.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT GENDER" />
-      <TextField fx:id="studentClas" layoutX="780.0" layoutY="600.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT CLASS &quot;11X&quot;" />
-      <TextField fx:id="studentBirthDate" layoutX="780.0" layoutY="700.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT BIRTH DATE &quot;YYYY-MM-DD&quot;" />
+      <TextField fx:id="studentId" layoutX="780.0" layoutY="200.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT ID" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <TextField fx:id="studentName" layoutX="780.0" layoutY="300.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT NAME" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <TextField fx:id="studentSurname" layoutX="780.0" layoutY="400.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT SURNAME" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <TextField fx:id="studentGender" layoutX="780.0" layoutY="500.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT GENDER" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <TextField fx:id="studentClas" layoutX="780.0" layoutY="600.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT CLASS &quot;11X&quot;" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <TextField fx:id="studentBirthDate" layoutX="780.0" layoutY="700.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE STUDENT BIRTH DATE &quot;YYYY-MM-DD&quot;" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="580.0" layoutY="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/pic_arrow_left_books.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="previousButton" layoutX="580.0" layoutY="900.0" onAction="#switchPage" prefHeight="100.0" prefWidth="100.0" text=".">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="1080.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/pic_ll_students_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="500.0" layoutX="1420.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/pic_rr_students_1.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

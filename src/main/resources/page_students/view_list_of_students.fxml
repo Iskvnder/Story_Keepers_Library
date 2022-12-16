@@ -1,23 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity"
-      minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="1080.0" prefWidth="1920.0"
-      xmlns="http://javafx.com/javafx/19"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="page_students.activity_list_of_students">
-    <TableView fx:id="listTable" layoutX="462.0" layoutY="154.0" prefHeight="800.0" prefWidth="1000.0">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFFCF2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="page_students.activity_list_of_students">
+    <TableView fx:id="listTable" layoutX="462.0" layoutY="154.0" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: f5ebe0; -fx-text-fill: 000814;">
       <columns>
-          <TableColumn fx:id="studentId" prefWidth="133.66668701171875" text="Student Id" />
-          <TableColumn fx:id="firstName" prefWidth="162.33331298828125" text="Name" />
-          <TableColumn fx:id="secondName" prefWidth="171.0" text="Surname" />
-          <TableColumn fx:id="gender" prefWidth="166.3333740234375" text="Gender" />
-          <TableColumn fx:id="clas" prefWidth="105.6666259765625" text="Class" />
-          <TableColumn fx:id="birthDate" prefWidth="260.0" text="Birth Date" />
+          <TableColumn fx:id="studentId" prefWidth="133.66668701171875" style="-fx-background-color: f5ebe0;" text="Student Id" />
+          <TableColumn fx:id="firstName" prefWidth="162.33331298828125" style="-fx-background-color: f5ebe0;" text="Name" />
+          <TableColumn fx:id="secondName" prefWidth="171.0" style="-fx-background-color: f5ebe0;" text="Surname" />
+          <TableColumn fx:id="gender" prefWidth="166.3333740234375" style="-fx-background-color: f5ebe0;" text="Gender" />
+          <TableColumn fx:id="clas" prefWidth="105.6666259765625" style="-fx-background-color: f5ebe0;" text="Class" />
+          <TableColumn fx:id="birthDate" prefWidth="260.0" style="-fx-background-color: f5ebe0;" text="Birth Date" />
       </columns>
     </TableView>
+   <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="480.0" layoutY="970.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../Images/pic_arrow_left_books.png" />
+      </image>
+   </ImageView>
+   <JFXButton fx:id="previousButton" layoutX="480.0" layoutY="970.0" onAction="#switchPage" prefHeight="100.0" prefWidth="100.0" text=".">
+      <font>
+         <Font size="1.0" />
+      </font>
+   </JFXButton>
+   <ImageView fitHeight="1080.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../Images/pic_ll_students.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="1080.0" fitWidth="300.0" layoutX="1620.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../Images/pic_rr_students.png" />
+      </image>
+   </ImageView>
 </Pane>

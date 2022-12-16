@@ -1,12 +1,19 @@
 package page_students;
 
 import DATABASE.DatabaseHandler;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class activity_add_student  {
     @FXML
@@ -23,6 +30,8 @@ public class activity_add_student  {
     TextField studentClas;
     @FXML
     TextField studentBirthDate;
+    @FXML
+    Button previousButton;
 
     @FXML
     void initialize(){
@@ -51,5 +60,11 @@ public class activity_add_student  {
 
             preparedStatement.executeUpdate();
 
+    }
+
+    public void switchPage(ActionEvent actionEvent) throws IOException {
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_students/view_students.fxml")));
+        Stage window = (Stage) previousButton.getScene().getWindow() ;
+        window.setScene(new Scene(root, 1920, 1080));
     }
 }

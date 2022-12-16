@@ -1,4 +1,4 @@
-package page_students;
+package page_books;
 
 import DATABASE.DatabaseHandler;
 import javafx.event.ActionEvent;
@@ -15,11 +15,11 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Objects;
 
-public class activity_delete_student {
+public class activity_delete_book {
     @FXML
     Button deleteButton;
     @FXML
-    TextField studentId;
+    TextField bookId;
     @FXML
     Button previousButton;
 
@@ -27,15 +27,15 @@ public class activity_delete_student {
     void initialize(){
         deleteButton.setOnAction(actionEvent -> {
             try {
-                deleteButton(studentId.getText());
+                deleteButton(bookId.getText());
             } catch (SQLException | ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
         });
     }
-    public void deleteButton(String studentId) throws SQLException, ClassNotFoundException {
+    public void deleteButton(String bookId) throws SQLException, ClassNotFoundException {
 
-        String insert = "DELETE FROM STUDENTS WHERE(student_id = "+ studentId + ")";
+        String insert = "DELETE FROM BOOKS WHERE(book_id = "+ bookId + ")";
         DatabaseHandler databaseHandler = new DatabaseHandler();
         PreparedStatement preparedStatement = databaseHandler.getDbConnection().prepareStatement(insert);
 
@@ -44,7 +44,7 @@ public class activity_delete_student {
     }
 
     public void switchPage(ActionEvent actionEvent) throws IOException {
-        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_students/view_students.fxml")));
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_books_second.fxml")));
         Stage window = (Stage) previousButton.getScene().getWindow() ;
         window.setScene(new Scene(root, 1920, 1080));
     }

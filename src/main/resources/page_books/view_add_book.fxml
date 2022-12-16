@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: FFFCF2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="page_books.activity_add_book">
+    <children>
+        <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="780.0" layoutY="800.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Images/pic_add_book_button.png" />
+        </ImageView>
+        <JFXButton fx:id="addButton" layoutX="780.0" layoutY="800.0" onAction="#initialize" prefHeight="100.0" prefWidth="400.0" text=".">
+         <font>
+            <Font size="1.0" />
+         </font></JFXButton>
+        <TextField fx:id="bookId" layoutX="780.0" layoutY="200.0" prefHeight="25.0" prefWidth="400.0" promptText="WRITE BOOK ID" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+            <font>
+                <Font size="18.0" />
+            </font></TextField>
+        <TextField fx:id="quantity" layoutX="780.0" layoutY="275.0" prefHeight="25.0" prefWidth="400.0" promptText="WRITE QUANTITY" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+            <font>
+                <Font size="18.0" />
+            </font></TextField>
+        <TextField fx:id="bookName" layoutX="780.0" layoutY="350.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE BOOK NAME" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+            <font>
+                <Font size="18.0" />
+            </font></TextField>
+        <TextField fx:id="pageCount" layoutX="780.0" layoutY="425.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE AMOUNT OF PAGES" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+            <font>
+                <Font size="18.0" />
+            </font></TextField>
+        <TextField fx:id="authorId" layoutX="780.0" layoutY="500.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE AUTHOR'S ID" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+            <font>
+                <Font size="18.0" />
+            </font></TextField>
+        <TextField fx:id="genreId" layoutX="780.0" layoutY="575.0" prefHeight="50.0" prefWidth="400.0" promptText="WRITE GENRE'S ID" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;">
+            <font>
+                <Font size="18.0" />
+            </font></TextField>
+        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="580.0" layoutY="900.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/pic_arrow_left_books.png" />
+            </image>
+        </ImageView>
+        <JFXButton fx:id="previousButton" layoutX="580.0" layoutY="900.0" onAction="#switchPage" prefHeight="100.0" prefWidth="100.0" text=".">
+            <font>
+                <Font size="1.0" />
+            </font>
+        </JFXButton>
+        <ImageView fitHeight="1080.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/pic_ll_students_1.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="1080.0" fitWidth="500.0" layoutX="1420.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/pic_rr_students_1.png" />
+            </image>
+        </ImageView>
+      <TextField fx:id="bookDescription" layoutX="780.0" layoutY="650.0" prefHeight="100.0" prefWidth="400.0" promptText="WRITE DESCRIPTION OF THE BOOK" style="-fx-background-color: f5ebe0; -fx-text-fill: #403D39;" />
+    </children>
+</Pane>

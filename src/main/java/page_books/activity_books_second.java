@@ -14,6 +14,10 @@ import java.util.Objects;
 
 public class activity_books_second {
     @FXML
+    Button addButton;
+    @FXML
+    Button deleteButton;
+    @FXML
     Button mainButton;
     @FXML
     Button studentsButton;
@@ -51,6 +55,19 @@ public class activity_books_second {
         Stage window = (Stage) previousButton.getScene().getWindow() ;
         window.setScene(new Scene(root, 1920, 1080));
     }
+
+    public void showDeleteBook(ActionEvent actionEvent) throws IOException {
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_delete_book.fxml")));
+        Stage window = (Stage) deleteButton.getScene().getWindow() ;
+        window.setScene(new Scene(root, 1920, 1080));
+    }
+
+    public void showAddBook(ActionEvent actionEvent) throws IOException {
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_add_book.fxml")));
+        Stage window = (Stage) addButton.getScene().getWindow() ;
+        window.setScene(new Scene(root, 1920, 1080));
+    }
+
     public void close(ActionEvent actionEvent) throws IOException {
         Platform.exit();
     }
