@@ -1,7 +1,7 @@
 module com.example.story_keepers_library {
 
     requires javafx.controls;
-
+    requires javafx.media;
     requires mysql.connector.j;
     requires javafx.fxml;
     requires java.sql;
