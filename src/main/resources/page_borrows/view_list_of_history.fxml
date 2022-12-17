@@ -14,7 +14,7 @@
       style="-fx-background-color: #FFFCF2;"
       xmlns="http://javafx.com/javafx/19"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="page_borrows.activity_list_of_borrows">
+      fx:controller="page_borrows.activity_list_of_history">
     <TableView fx:id="listTable" layoutX="462.0" layoutY="154.0" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: f5ebe0; -fx-text-fill: 000814;">
         <columns>
             <TableColumn fx:id="borrowId" prefWidth="133.66668701171875" style="-fx-background-color: f5ebe0;" text="Borrow ID" />

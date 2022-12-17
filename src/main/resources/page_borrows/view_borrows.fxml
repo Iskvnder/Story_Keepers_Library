@@ -62,7 +62,7 @@
     <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@../Images/pic_history_borrows.png" />
     </ImageView>
-    <JFXButton layoutX="200.0" layoutY="600.0" prefHeight="150.0" prefWidth="800.0" text=".">
+    <JFXButton fx:id="listHistoryButton" layoutX="200.0" layoutY="600.0" onAction="#switchToHistory" prefHeight="150.0" prefWidth="800.0" text=".">
         <font>
             <Font size="1.0" />
         </font>
