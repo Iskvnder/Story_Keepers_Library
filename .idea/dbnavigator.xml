@@ -23,9 +23,7 @@ ADD COLUMN book_description LONGTEXT AFTER book_name;]]></console>
     </last-used-providers>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="ca764717-8b56-4bb9-8294-8ef4c88bc5cd" object-ref="schemas/dbms/tables/genres" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="ca764717-8b56-4bb9-8294-8ef4c88bc5cd" dataset="dbms.borrows" active-filter-id="EMPTY_FILTER" />

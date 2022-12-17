@@ -27,6 +27,8 @@ public class activity_borrows {
     Button closeButton;
     @FXML
     Button listButton;
+    @FXML
+    Button borrowByStudentButton;
 
 
 
@@ -58,6 +60,11 @@ public class activity_borrows {
     public void switchToList(ActionEvent actionEvent) throws IOException {
         Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_borrows/view_list_of_borrows.fxml")));
         Stage window = (Stage) listButton.getScene().getWindow() ;
+        window.setScene(new Scene(root, 1920, 1080));
+    }
+    public void switchToBorrowByStudent(ActionEvent actionEvent) throws IOException {
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_borrows/view_borrow_by_student.fxml")));
+        Stage window = (Stage) borrowByStudentButton.getScene().getWindow() ;
         window.setScene(new Scene(root, 1920, 1080));
     }
 
