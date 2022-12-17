@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #bde0fe;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="page_books.activity_books">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #bde0fe;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="page_books.activity_genres">
     <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="1390.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@../Images/pic_main_page_books.png" />
     </ImageView>
@@ -44,37 +44,29 @@
         <Image url="@../Images/pic_books_left.png" />
     </ImageView>
     <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../Images/pic_list_of_books.png" />
+        <Image url="@../Images/pic_list_of_genres_all.png" />
     </ImageView>
-    <JFXButton fx:id="booksButton" layoutX="200.0" layoutY="200.0" onAction="#showListOfBooks" prefHeight="150.0" prefWidth="800.0" text=".">
+    <JFXButton fx:id="genresListButton" layoutX="200.0" layoutY="200.0" onAction="#showListOfGenres" prefHeight="150.0" prefWidth="800.0" text=".">
         <font>
             <Font size="1.0" />
         </font>
     </JFXButton>
     <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../Images/pic_list_of_genre.png" />
+        <Image url="@../Images/pic_genres_by_author.png" />
     </ImageView>
-    <JFXButton fx:id="genreButton" layoutX="200.0" layoutY="400.0" onAction="#switchGenresPage" prefHeight="150.0" prefWidth="800.0" text=".">
+    <JFXButton fx:id="bookByGenreButton" layoutX="198.0" layoutY="410.0" onAction="#showListByGenre" prefHeight="150.0" prefWidth="800.0" text=".">
         <font>
             <Font size="1.0" />
         </font>
     </JFXButton>
-    <ImageView fitHeight="150.0" fitWidth="800.0" layoutX="200.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../Images/pic_list_of_authors.png" />
+    <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="80.0" layoutY="900.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../Images/pic_arrow_left_books.png" />
+        </image>
     </ImageView>
-    <JFXButton fx:id="authorsButton" layoutX="200.0" layoutY="600.0" onAction="#switchAuthorsPage" prefHeight="150.0" prefWidth="800.0" text=".">
+    <JFXButton fx:id="previousButton" layoutX="80.0" layoutY="900.0" onAction="#switchPage" prefHeight="100.0" prefWidth="100.0" text=".">
         <font>
             <Font size="1.0" />
         </font>
     </JFXButton>
-   <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1000.0" layoutY="900.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-         <Image url="@../Images/pic_arrow_right_books.png" />
-      </image>
-   </ImageView>
-   <JFXButton fx:id="nextButton" layoutX="1000.0" layoutY="900.0" onAction="#switchPage" prefHeight="100.0" prefWidth="100.0" text=".">
-      <font>
-         <Font size="1.0" />
-      </font>
-   </JFXButton>
 </Pane>

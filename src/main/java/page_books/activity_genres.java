@@ -1,6 +1,4 @@
 package page_books;
-
-
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,25 +11,22 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class activity_books {
-
-
+public class activity_genres {
     @FXML
-    Button booksButton;
+    Button genresListButton;
     @FXML
     Button mainButton;
+
     @FXML
-    Button authorsButton;
+    Button previousButton;
     @FXML
     Button studentsButton;
     @FXML
     Button borrowsButton;
     @FXML
-    Button nextButton;
-    @FXML
     Button closeButton;
     @FXML
-    Button genreButton;
+    Button bookByGenreButton;
 
     private Stage stage;
     private Parent root;
@@ -55,29 +50,24 @@ public class activity_books {
         window.setScene(new Scene(root, 1920, 1080));
     }
 
+    public void showListOfGenres(ActionEvent actionEvent) throws IOException {
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_list_of_genres.fxml")));
+        Stage window = (Stage) genresListButton.getScene().getWindow() ;
+        window.setScene(new Scene(root, 1920, 1080));
+    }
+
     public void switchPage(ActionEvent actionEvent) throws IOException {
-        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_books_second.fxml")));
-        Stage window = (Stage) nextButton.getScene().getWindow() ;
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_books.fxml")));
+        Stage window = (Stage) previousButton.getScene().getWindow() ;
         window.setScene(new Scene(root, 1920, 1080));
     }
 
-    public void showListOfBooks(ActionEvent actionEvent) throws IOException {
-        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_list_of_books.fxml")));
-        Stage window = (Stage) booksButton.getScene().getWindow() ;
+    public void showListByGenre(ActionEvent actionEvent) throws IOException {
+        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_book_by_genre.fxml")));
+        Stage window = (Stage) bookByGenreButton.getScene().getWindow() ;
         window.setScene(new Scene(root, 1920, 1080));
     }
 
-    public void switchAuthorsPage(ActionEvent actionEvent) throws IOException {
-        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_authors.fxml")));
-        Stage window = (Stage) authorsButton.getScene().getWindow() ;
-        window.setScene(new Scene(root, 1920, 1080));
-    }
-
-    public void switchGenresPage(ActionEvent actionEvent) throws IOException {
-        Parent root =  FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/page_books/view_genres.fxml")));
-        Stage window = (Stage) authorsButton.getScene().getWindow() ;
-        window.setScene(new Scene(root, 1920, 1080));
-    }
 
     public void close(ActionEvent actionEvent) throws IOException {
         Platform.exit();
