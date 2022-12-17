@@ -35,7 +35,7 @@ public class activity_delete_borrow {
     }
     public void deleteButton(String borrowId) throws SQLException, ClassNotFoundException {
 
-        String insert = "DELETE FROM BORROWS WHERE(book_id = "+ borrowId + ")";
+        String insert = "DELETE FROM BORROWS WHERE(borrow_id = "+ borrowId + ")";
         DatabaseHandler databaseHandler = new DatabaseHandler();
         PreparedStatement preparedStatement = databaseHandler.getDbConnection().prepareStatement(insert);
 

@@ -22,7 +22,7 @@ ADD COLUMN book_description LONGTEXT AFTER book_name;]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="ca764717-8b56-4bb9-8294-8ef4c88bc5cd" object-ref="schemas/dbms/tables/borrows" />
+      <object connection-id="ca764717-8b56-4bb9-8294-8ef4c88bc5cd" object-ref="schemas/dbms/tables/authors" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
