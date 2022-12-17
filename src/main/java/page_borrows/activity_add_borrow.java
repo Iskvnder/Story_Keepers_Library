@@ -1,5 +1,6 @@
 package page_borrows;
 
+
 import DATABASE.DatabaseHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,6 +17,7 @@ import java.sql.SQLException;
 import java.util.Objects;
 
 public class activity_add_borrow {
+
     @FXML
     Button addButton;
     @FXML
@@ -45,7 +47,7 @@ public class activity_add_borrow {
     public void addStudent(String borrowId, String studentId, String bookId,
                            String takeDate, String broughtDate) throws SQLException, ClassNotFoundException {
 
-        String insert = "INSERT INTO borrows(borrow_id, student_id, book_id, take_date, brought_date) VALUES (?,?,?,?,?,?)";
+        String insert = "INSERT INTO borrows(borrow_id, student_id, book_id, take_date, brought_date) VALUES (?,?,?,?,?)";
         DatabaseHandler databaseHandler = new DatabaseHandler();
         PreparedStatement preparedStatement = databaseHandler.getDbConnection().prepareStatement(insert);
 

@@ -20,7 +20,7 @@
     </TableView>
     <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="480.0" layoutY="970.0" pickOnBounds="true" preserveRatio="true">
         <image>
-            <Image url="@../Images/pic_arrow_left_books.png" />
+            <Image url="@../Images/pic_arrow_left.png" />
         </image>
     </ImageView>
     <JFXButton fx:id="previousButton" layoutX="480.0" layoutY="970.0" onAction="#switchPage" prefHeight="100.0" prefWidth="100.0" text=".">
@@ -30,12 +30,12 @@
     </JFXButton>
     <ImageView fitHeight="1080.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
         <image>
-            <Image url="@../Images/pic_ll_students.png" />
+            <Image url="@../Images/pic_ll_borrow.png" />
         </image>
     </ImageView>
     <ImageView fitHeight="1080.0" fitWidth="300.0" layoutX="1620.0" pickOnBounds="true" preserveRatio="true">
         <image>
-            <Image url="@../Images/pic_rr_students.png" />
+            <Image url="@../Images/pic_rr_borrow.png" />
         </image>
     </ImageView>
 </Pane>
